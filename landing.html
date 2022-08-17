@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <style>   
+ @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+     
+     * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 650px) {
+  body {
+    display: flex;
+    font-size: 20px;
+    justify-content: flex-start;
+  }
+  header {
+     display: flex;
+     justify-content: flex-start;
+    font-size: 20px;
+  }
+}
+
+        header {
+          position: fixed;
+          display: flex;
+      justify-content: space-between;
+        align-self: space-between;
+        background: lightblue;
+        width: 100%;
+        padding: 0px 20px;
+        font-family: 'Varela Round', Arial;
+        }
+        .header {
+          justify-content: space-around;
+        }
+        .barra {
+          display: flex;
+          flex-direction: row;
+          justify-items: flex-end;
+          font-size: 25px;
+        }
+        .nav-link {
+          margin: 30px; 
+          color: white;
+          text-decoration: none;
+          font-style: italic;
+        }
+        .nav-link:hover{
+box-shadow: 1px 1px 7px #9CC6D5;
+
+
+        }
+        .lollo {
+          width:300px;
+          height:100px;
+        }
+          body {
+            background:lightblue;
+            display:flex;
+            flex-direction: column;
+          align-items: center;
+             }
+             .p {
+      display: flex;
+      text-align: justify;
+      align-self: center;
+      margin: 80px 200px 50px 200px;
+      font-family: 'Varela Round', Arial;
+      font-size: 25px;
+      color: #00a;
+              
+            }
+            h1{ 
+              display: flex;
+              flex-direction: column;
+           justify-content: flex-start;
+              margin: 150px 50px 0px 50px;
+      font-family:  'Varela Round', Arial;
+      font-size: 30px;
+      color: #00a;
+
+            }
+
+            iframe {
+              display:flex;
+              align-self: flex-end;
+              width: 700px;
+              height: 300px;
+            }
+        #email {  
+          padding: 20px 80px 20px 80px;
+          border-radius: 10px;
+          margin: 0px 10px 10px 10px; 
+          font-size: 25px;
+          text-align: center;
+          border-color: white;
+          color: grey;
+        }
+        form {
+          display: flex;
+          justify-content: center;
+          align-items:center;
+          flex-direction: column;
+        }
+        #submit {
+          padding: 20px 60px 20px 60px; 
+          border-radius: 20px;
+          font-size: 20px;
+          border-color: white;
+          color: grey;
+          margin: 15px 0px 130px 0px;
+        }
+        #submit:hover{
+          background: darkblue;
+          color: white;
+          border-color: darkblue;
+        }
+        
+        .footer{
+          display: flex;
+      align-self: center;
+      margin-bottom: 30px;
+      font-family: 'Varela Round', Arial;
+      font-size:15px;
+      color: #00a;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="header">
+      
+<nav class="barra" id="nav-bar"> 
+   <div id="logo">
+<img class="lollo" id="header-img" src="https://blogfeministas.files.wordpress.com/2012/10/lollo.jpg?w=640" alt="logo do chocolate lollo">
+</div>
+            <a class="nav-link" href="#pri"> Nossa história  </a>
+
+            <a class="nav-link" href="#video"> Propaganda  </a>
+
+            <a class="nav-link" href="#email"> Compre já  </a>
+</nav> 
+    </header>
+    <div> 
+      <h1> O chocolate fofinho da Nestlè está de volta! </h1>
+       </div>
+    <div id="pri"> <p class="p">Atendendo aos pedidos dos chocolovers, a Nestlé anuncia a volta de um dos chocolates mais queridos do Brasil: Lollo, “o chocolate fofinho da Nestlé”. Ícone da década de 80 e de toda uma geração de consumidores, Lollo volta ao mercado com a receita original e mesma identidade visual, para encantar os saudosistas e conquistar novos fãs. Com o mote “Ele voltou!”, o chocolate Lollo passa a integrar definitivamente a caixa de Especialidades Nestlé na sua versão mini e também poderá ser encontrado, por tempo limitado, em embalagem individual de 28g e multipack com três unidades de 28g cada. Para relembrar, a seguir a propaganda do chocolate nos anos 80.</p>
+</div>
+<div>
+  <iframe id="video" frameborder="0" allowfullscreen src="https://www.youtube.com/watch?v=XqEksmbv_yU"></iframe>
+  </div>
+  <div>
+   <p class="p"> Lojista, faça já sua encomenda para atacado! A partir de 10 unidades. Deixe seu email para entrarmos em contato: </p>
+    </div>
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+      <div>
+<input type="email"
+id="email" name="email" placeholder="Insira seu email aqui"/>
+        </div>
+        <div>
+          <input id="submit" type="submit"/>
+          </div>
+      </form>
+      <footer class="footer"> Desenvolvido exclusivamente para conclusão do curso HTML/CSS FreeCodeCamp. Obrigada por acessar! </footer>
+</body>
+
+
+</html>
