@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+     
+     @import url('https://fonts.googleapis.com/css2?family=Gantari:wght@600&display=swap');
+
+
+#submit{
+    background-color: #335;
+    border-color: #335;
+    color: white;
+}
+
+#submit:hover {
+   background-color: white;
+   border-color: white;
+  color: #335;
+}
+
+     #oi {
+       display: flex;
+       justify-content: center;
+       flex: 1 0 auto;
+       
+     }
+#header{
+  color: #335;
+  font-family: 'Gantari', Tahoma, sans-serif;
+  margin: 35px 30px 10px 25px;
+}
+ #description{
+ font-size: 24px;
+ }
+#body {
+  background-color:#eeeeee;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+     #survey-form {
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+      border-radius: 2.4%;
+      box-shadow: 0px 0px 6px;
+      background-color: #74a8d4;
+      color: #335;
+      font-family: 'Gantari', Tahoma, sans-serif;
+      font-size: 30px;
+      background-size: 100px;
+      margin:30px 150px 50px 150px;
+      padding:  80px 130px 80px 130px;
+      text-align: flex-end;
+      flex-basis: 0;
+      
+      
+     }
+
+.barra { 
+  align-content: center;
+  border-radius: 6px;
+  border-color: white;
+  background-color: white;
+  padding: 16px;
+  margin: 6px 0px 6px 0px;
+  width: 500px;
+  font-style: italic;
+}
+
+#obg{
+  font-size: 15px;
+  font-style: italic;
+}
+    </style>
+    </head>
+    
+    <body id="body">
+      <div class="intro"> 
+        <header id="header">
+            <h1 id="title"> Pesquisa: qual a bebida mais consumida entre os jovens adultos atualmente? </h1>
+            <p id="description"> Se você tem entre 18-29, se possível reserve um pouco do seu tempo para ajudar na nossa pesquisa. <br>
+            Muito obrigado! </p>
+        </header> 
+
+      </div>
+      <div id="oi">
+      <form id="survey-form">
+         <div>
+          <label for="name" id="name-label">Nome: </label> <br>
+          <input type="text" id="name" class="barra" placeholder="Insira seu nome" required/>
+         </div>
+         <div>
+          <label for="number" id="number-label">Idade: </label>  <br>
+          <input type="number" id="number" min="18" max="29" class="barra" placeholder="18-29"/>
+         </div>
+        <div>
+          <label for="email" id="email-label">Email: </label>  <br>
+          <input type="email" id="email" class="barra" placeholder="Insira seu email" required/>
+        </div>
+        <div>
+          <label for="autorizo"> Eu autorizo minha participação nessa pesquisa. Minha identidade permanecerá anônima. </label>  <br>
+          <label><input type="radio" name="aut" value="sim" id="autorizo" required/> Sim </label>  <br>
+          <label><input type="radio" name="aut" value="nao" id="NaoAutorizo"/> Não </label>
+        </div>
+        <div class="consumo">
+          <p>Qual dessas bebidas você mais consome no dia a dia? Pode selecionar mais de uma.</p> 
+          <label> 
+            <input name="bebida" value="agua" type="checkbox"> Água </label> <br>
+            <label> 
+              <input name="bebida" value="refri" type="checkbox"> Refrigerante</label> <br>
+          <label>
+            <input name="bebida" value="suco" type="checkbox"> Suco
+          </label>  <br>
+          <label>
+            <input name="bebida" value="cerveja" type="checkbox"> Cerveja
+          </label> <br>
+          <label>
+            <input name="bebida" value="cha" type="checkbox"> Chá
+          </label> <br>
+          <label>
+            <input name="bebida" value="outra" type="checkbox"> Outra
+          </label> <br>
+        </div>
+        <div>
+         <p>  Se você marcou outra bebida, escreva aqui:  
+          <textarea id="idoutra" name="outra" class="barra" placeholder="Escreva aqui">  
+          </textarea> </p>
+        </div>
+        
+        <div>
+          <label for="dropdown"> Com qual frequência você toma essa bebida? </label> <br>
+        <select name="freq" id="dropdown" class="barra">
+            <optgroup>
+              <option value="umaduas">Uma a duas vezes por semana </option>
+            <option value="duastres">Duas a três vezes por semana</option>
+            <option value="tresquatro">Três a quatro vezes por semana</option>
+            <option value="quatrocinco">Quatro a cinco vezes por semana</option>
+            <option value="maisdecinco">Mais de cinco vezes por semana</option>
+            </optgroup>
+          </select>
+        </div>
+<br>
+        <div> <button id="submit" type="submit" class="barra">Enviar</button>
+        </div>
+        <br>
+        <p id="obg"> Site não funcional, projeto apenas para certificação em HTML e CSS básico do FreeCodeCamp. Obrigada!</p>
+      </form>
+</div>
+</body>
+
+</html>
