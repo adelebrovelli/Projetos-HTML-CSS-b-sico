@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css"/>  
+    <style>
+     
+     #navbar {
+       margin-top: 0px;
+       margin-left: 4px;
+      position: fixed;
+      width: 350px;
+    left: -6px;
+      height: 100%;
+      font-size: 25px;
+      border-right: solid;
+      border-color: grey;
+      
+     } 
+     .nav-link {
+       text-decoration: none;
+       text-align: right;
+       color: grey;
+     }
+
+     #li  > li{
+        list-style: none;
+        margin: -3px 0px 12.18px -38px;
+        border-bottom: solid grey 2px;
+        text-align: center;
+        
+     }
+
+     .h1{
+       text-align: center;
+       border-bottom: solid grey 2px;
+      color: grey;
+     }
+
+     #main-doc {
+       font-size: 21px;
+      margin-left: 350px;
+      
+     }
+     #footer{
+       font-size: 19px;
+      margin-left: 350px;
+      color: grey;
+     }
+     body {
+       font-family: Arial;
+     }
+     #navbar header {
+       margin-left: 2px;
+       margin-bottom: -20px;
+       margin-top: -20px;
+     }
+     @media only screen and (max-width: 815px) {
+  #navbar ul {
+    height: 207px;
+  } }
+      </style>
+    </head>
+  <body>
+    <nav id="navbar">
+        <header><h1 class="h1"> Tópicos: </h1></header>
+        <ul>
+          <div id="li">
+          <li>
+            <a class="nav-link" href="#Flexbox"> Flexbox </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Por_quê_Flexbox?"> Por quê Flexbox? </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Introduzindo_um_exemplo_simples"> Introduzindo um exemplo simples </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Especificando_os_elementos_a_serem_definidos_como_caixas_flex"> Especificando os elementos a serem definidos como caixas flex </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Um_aparte_no_modelo_flex"> Um aparte no modelo flex </a> 
+          </li>
+          <li>
+            <a class="nav-link" href="#Colunas_ou_linhas?"> Colunas ou linhas? </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Embrulhamento"> Embrulhamento </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Forma_abreviada:_flex-flow"> Forma abreviada: flex-flow </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Dimensionamento_flexível_de_elementos_flex"> Dimensionamento flexível de elementos flex </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Flex:_Forma_abreviada_ou_forma_normal?"> Flex: Forma abreviada ou forma normal? </a>
+          </li>
+</div>
+        </ul>
+    </nav>
+    <div>
+      <main id="main-doc">
+        <article>
+        <section class="main-section" id="Flexbox">
+          <header><h1> Flexbox </h1></header>
+          <p>
+            Uma nova tecnologia, mas com suporte bastante difundido entre navegadores, o Flexbox está se tornando apto para uso geral. Flexbox provê ferramentas para criação rápida de layouts complexos e flexíveis, e características que se mostraram historicamente difíceis com CSS. Este artigo explica todos os seus fundamentos.
+          </p>
+        </section>
+        <section class="main-section" id="Por_quê_Flexbox?">
+        <header><h1> Por quê Flexbox? </h1></header>
+        <p>
+          Por um longo tempo, as únicas ferramentas compatíveis entre browsers disponíveis para criação de layouts CSS eram coisas como floats e posicionamento. Estas são boas e funcionam, mas em alguns casos também são limitadas e frustrantes.
+<br>
+          Os requisitos de layouts a seguir são difíceis ou impossíveis de se conseguir com estas ferramentas, em qualquer tipo conveniente e flexível:
+          <br>
+         <ul> <li> Centralizar um bloco de conteúdo verticalmente dentro de seu pai.</li>
+          <li> Fazer com que os filhos de um container ocupe uma quantidade igual de largura/altura disponível, independente da quantidade de largura/altura disponível. </li>
+          <li> Fazer todas as colunas de um layout com múltiplas colunas adotem a mesma altura, mesmo que contenham uma quantidade diferente de conteúdo.</li></ul>
+          Como você verá nas seções subsequentes, flexbox faz muitas tarefas de layouts de maneira mais fácil. Vamos nos aprofundar!
+
+        </p>
+       </section>
+       <section class="main-section" id="Introduzindo_um_exemplo_simples">
+        <header><h1> Introduzindo um exemplo simples </h1></header>
+        <p>
+          Neste artigo nós vamos trabalhar uma série de exercícios para ajudá-lo a entender como o flexbox funciona. Para começar, você deve fazer uma cópia local do arquivo inicial — flexbox0.html do nosso repositório no github — carregue-o em um navegador moderno (como Firefox ou Chrome), e abra o arquivo no seu editor de código. Você pode ver a página aqui também.
+
+          Você verá que temos um elemento<code> header </code> com um cabeçalho no nível superior dentro dele, e um elemento <code> section </code> contendo três <code> articles </code>. Nós vamos usá-los para criar um layout padrão de três colunas.
+
+        </p>
+       </section>
+       <section class="main-section" id="Especificando_os_elementos_a_serem_definidos_como_caixas_flex">
+        <header><h1> Especificando os elementos a serem definidos como caixas flex </h1></header>
+        <p>
+          Para iniciar, vamos definir quais elementos serão flexible boxes. Para isto, temos que definir um valor especial de display no elemento pai dos elementos que queremos afetar. neste caso são os elementos <code>article</code>, portanto vamos definir o valor no elemento <code>section</code> (que se torna um flex container):
+          <br> <code> section {
+            display: flex;
+          }  </code>
+        </p>
+       </section>
+       <section class="main-section" id="Um_aparte_no_modelo_flex">
+        <header><h1> Um aparte no modelo flex </h1></header>
+        <p>
+          Quando os elementos são definidos como flexibles boxes, eles são dispostos ao longo de dois eixos:
+<br> <ul>
+        <li>O <strong>main axis</strong> é o eixo que corre na direção em que os flex items estão dispostos (por exemplo, as linhas da página, ou colunas abaixo da página.) O início e o fim do eixo é chamado <strong> main start</strong> e <strong>main end.</strong></li>
+         <li>O <strong>cross axis</strong> é o eixo perpendicular que corre na direção em que os flex items são dispostos. O início e o fim deste eixo são chamados de <strong> cross start</strong> e <strong>cross end.</strong></li>
+         <li> O elemento pai que possui display: flex configurado ( <code> section </code> em nosso exemplo) é chamado de <strong>flex container</strong>.</li>
+          <li>Os itens iniciados como flexible boxes dentro do flex container são chamados <strong>flex items</strong> (o <code> section </code> em nosso caso).</li>
+</ul>
+Tenha esta terminologia em mente à medida que passar para as seções subsequentes. Você pode voltar a esta referência se ficar confuso quanto aos termos usados inicialmente.
+        </p>
+       </section>
+      <section class="main-section" id="Colunas_ou_linhas?">
+        <header><h1> Colunas ou linhas? </h1></header>
+        <p>
+          Flexbox possui uma propriedade chamada flex-direction que especifica a direção do eixo principal (em qual direção os filhos da flexbox estarão arranjados) — que por padrão seu valor é row (linha), que faz com que eles fiquem arranjados numa linha na direção que o seu navegador está configurado de acordo com a direção de leitura do seu idioma (da esquerda para a direita, no caso do inglês ou português).
+
+Experimente adicionar a seguinte declaração na seção de sua regra:
+<br> <code> flex-direction: column; </code>
+<br> Você verá que isso organiza os elementos no layout de coluna, assim como eles estavam antes de adicionarmos qualquer regra CSS. Antes de você seguir, remova essa declaração do seu exemplo.
+        </p>
+        </section>
+        <section class="main-section" id="Embrulhamento">
+         <header><h1> Embrulhamento </h1></header>
+         <p>
+      Um problema que aparece quando você tem uma quantidade fixa de elementos com a mesma largura e altura no seu esquema é que eventualmente seus elementos filhos flexbox irão sobrepor seu elemento pai (container), quebrando o layout. Uma maneira de consertar isso é adicionando a seguinte declaração na seção de sua regra CSS: 
+           <br> <code> flex-wrap: wrap; </code>
+           Agora temos várias linhas — tantos elementos filhos flexbox estão encaixados em cada linha quantos fazem sentido, e qualquer sobreposição é movida para a próxima linha. A declaração flex: 200px configurada nos elementos<code> article </code>significa que cada um terá pelo menos 200 pixels de largura; discutiremos essa propriedade mais detalhadamente mais tarde. Você também deve notar que os últimos filhos na última linha estão mais largos para que a linha inteira possa ser preenchida.
+<br>
+Mas ainda tem mais para fazermos com isso. Primeiro, experimente mudar sua propriedade flex-direction para o valor row-reverse — agora você verá que ainda tem um layout com várias linhas, mas ele começa no canto oposto da janela do navegador e segue na direção reversa.
+         </p>
+        </section>
+        <section class="main-section" id="Forma_abreviada:_flex-flow">
+          <header><h1> Forma abreviada: flex-flow </h1></header>
+          <p>
+           A esta altura vale ressaltar que existe uma abreviação para as regras flex-direction e flex-wrap: a flex-flow. Logo, você pode substituir as seguintes regras:
+           <br> <code> flex-direction: row; <br>
+flex-wrap: wrap; </code> <br>
+por <br> <code> flex-flow: row wrap; </code> 
+          </p>
+        </section>
+        <section class="main-section" id="Dimensionamento_flexível_de_elementos_flex">
+          <header><h1> Dimensionamento flexível de elementos flex </h1></header>
+          <p>
+       Vamos agora voltar ao nosso primeiro exemplo, e ver como podemos controlar qual a proporção de espaço os elementos flex pode tomar. Localize sua cópia local do arquivo flexbox0.html, ou tenha uma cópia de flexbox1.html como um novo ponto de partida (veja online).
+
+Primeiro adicione a seguinte regra no final do seu CSS:
+<br> <code> article {
+  flex: 1;
+} </code> <br>
+Esse é um valor relativo sem unidade que define quanto de espaço disponível pelo eixo principal cada elemento flex pode ter. Neste caso, estamos dando para cada elemento article o valor de 1, que significa que eles terão uma quantidade igual de espaço restante depois de coisas como preenchimento (padding) e margem (margin) forem definidos. É uma proporção, o que significa que dado que mesmo que você coloque o valor de "400000", para cada elemento flex, terá o mesmo efeito que o valor "1" previamente colocado.
+<br>
+Agora, adicione a seguinte regra abaixo da última:
+<br> <code> article:nth-of-type(3) {
+  flex: 2;
+} </code> <br>
+Assim que você atualizar a página, você verá que o terceiro elemento article ocupa duas vezes mais do espaço disponível que os outros dois — existe agora quatro unidades na proporção total disponível. Os dois primeiros elementos flex tem uma unidade cada, dessa proporção, logo cada um deles ocupam 1/4 do espaço disponível. O terceiro tem 2 unidades, logo ele ocupa 2/4 (ou metade, 1/2) do espaço disponível.
+<br>
+Você também pode especificar um valor de tamanho mínimo para a regra flex. Experimente atualizar a regra para o article existente para que fique assim:
+<br> <code> article {
+  flex: 1 200px;
+}
+<br>
+article:nth-of-type(3) {
+  flex: 2 200px;
+} </code> <br> 
+Isso basicamente diz o seguinte: "Para cada elemento flex primeiro será dado 200px do espaço disponível. Depois, o restante do espaço disponível será distribuído entre os elementos, de acordo com a unidade de proporção definida.". Atualize a página e você verá a diferença de como o espaço é distribuído.
+          </p>
+        </section>
+        <section class="main-section" id="Flex:_Forma_abreviada_ou_forma_normal?">
+          <header><h1> Flex: Forma abreviada ou forma normal? </h1></header>
+          <p> <code> flex </code>é uma propriedade abreviada que pode especificar até três valores diferentes:
+
+<ul> <li> O valor de proporção sem unidade que falamos sobre ele acima. Ele também pode ser especificado individualmente usando a regra flex-grow (en-US). </li>
+<li> Um segundo valor de proporção sem unidade — flex-shrink (en-US) — que convém ser usado quando os elementos flex estão sobrepondo a elemento recipiente (container). Este especifica qual a quantidade será retirada do tamanho de cada elemento flex, para que ele não ultrapasse o valor do elemento recipiente (container). Esta é uma funcionalidade bem avançada do flexbox, e não será abordada neste artigo. </li>
+<li> O valor mínimo para o tamanho que discutimos acima. Este pode ser especificado individualmente usando a regra flex-basis (en-US).</li> </ul>
+<br> Aconselhamos usar sempre a forma abreviada a menos que você precise usar a regra normal (por exemplo para sobrescrever algum valor pré-definido). As regras normais, isto é não abreviadas, geram muito mais código e podem gerar confusão.
+          </p>
+        </section>
+        </article>
+      </main>
+      <footer id="footer">  Projeto para conclusão do curso de HTML/CSS do FreeCodeCamp. Obrigada! </footer>
+    </div>
+    </body>
+  </html>
