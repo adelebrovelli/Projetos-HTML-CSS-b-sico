@@ -1,0 +1,156 @@
+<DOCTYPE html>
+  <html>
+      <head>
+          <link rel="stylesheet" href="styles.css" />
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+          <style>
+
+* { margin: 0;
+padding: 0;
+font-family: 'Playfair Display', serif;
+text-decoration: none;
+}
+nav{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: lavender;
+}
+nav a{
+  margin: 25px 30px 25px 30px;
+  font-family:'Playfair Display', serif;
+  font-size: 30px;
+  color: purple;
+  text-decoration: none;
+}
+nav a:hover {
+  color: white;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+} 
+.main section {
+  padding: 220px;
+  text-align: center;
+  font-family: Arial;
+  font-size: 25px;
+  color: purple;
+  min-width: 768px;
+max-width: 1024px;
+}
+#projects{
+  background-color: lavender;
+  margin: 0px 0px 30px 0px;
+}
+#todos{
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: center
+}
+.project-tile{
+  width: 100%;
+  font-size: 22px;
+}
+#quad{
+  width: 100px; 
+  height: 100px;
+  background: white;
+  margin: 40px;
+  
+}
+#link{
+  width: 100px;
+  height: 100px;
+}
+#quad:hover{
+  opacity: 40%;
+}
+#projects a {
+  text-decoration: none;
+  color:purple;
+  }
+  h1{
+    font-style: italic;
+  }
+  h3 {
+    color: white;
+    text-shadow: purple 1.2px 1.2px 1px;
+  }
+footer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: lavender;
+  font-family: Arial;
+  font-size: 37px;
+  color: purple;
+  padding: 35px 0px 35px 0px;
+}
+          </style>
+      </head>
+      <body>
+      <header>
+          <nav id="navbar"> 
+              <a href="#welcome-section"> Boas vindas </a>
+              <a href="#projects"> Projetos </a>
+              <a href="#sobre-mim"> Sobre mim </a>
+          </nav>
+      </header>
+      <div class="main">
+      <section id="welcome-section">
+          <h1> Bem-vinda(o)! Eu sou Adele.</h1>
+          <p> Você agora está acessando meu projeto de portfólio pessoal para a conclusão do curso de HTML e CSS básico do FreeCodeCamp. Os projetos exibidos aqui também foram feitos para a conclusão do curso. Abaixo deixo meu portfólio e um pouco sobre mim. </p>
+          
+      </section>
+      <section id="projects">
+        <h1> Projetos</h1>
+        <div id="todos">
+          <div id="quad"> 
+            <a href="https://github.com/adelebrovelli/Projetos-HTML-CSS-b-sico/commit/fa4584e2b85ab965545cdc19557eec7a5f1663c1" target="_blank"> <div id="link"> </div> 
+            </a> 
+            </div>
+           <div id="quad">
+             <a href="https://github.com/adelebrovelli/Projetos-HTML-CSS-b-sico/blob/main/form.html" target="_blank"> <div id="link"></div></a>
+              </div> 
+           <div id="quad">
+             <a href="https://github.com/adelebrovelli/Projetos-HTML-CSS-b-sico/blob/main/landing.html" target="_blank"> <div id="link"> </div> </a>
+              </div> 
+           <div id="quad">
+              <a href="https://github.com/adelebrovelli/Projetos-HTML-CSS-b-sico/blob/main/doc%20fcc.html" target="_blank"> <div id="link"> </div> </a>
+               </div>
+      <div class="project-tile">
+          <p> 1 - Página de homenagem: Alan Turing </p>
+      </div>
+      <div class="project-tile"> 
+          <p> 2 - Formulário: Pesquisa  </p>
+      </div>
+      <div class="project-tile"> 
+          <p> 3 - Landing page: Chocolate Lollo </p>
+      </div>
+      <div class="project-tile" > 
+          <p> 4 - Página de documentação técnica: Flexbox </p>
+          <p> <h3> Os quadrados são a direção! </h3> </p>
+      </div>
+      </div>
+      </section>
+      <section id="sobre-mim">
+        <h1>Sobre mim</h1>
+          <p>
+              Me chamo Adele Brovelli, estudante do segundo período de Ciências da Computação na UNICAP, buscando explorar e conhecer todas as áreas de tecnologia possíveis durante minha vida acadêmica. No momento estou estudando HTML/CSS e Java. Deixo meus projetos e atividades no meu GitHub. Você pode acessar minhas redes aqui: </p>
+<p>GitHub: <a href="https://github.com/adelebrovelli" target="_blank" id="profile-link">@adelebrovelli</a> <br>
+LinkedIn: <a href="https://br.linkedin.com/in/adele-brovelli-3ba092234" target="_blank" id="profile-link">Adele Brovelli </adele>
+          </p>
+      </section>
+      </div>
+
+
+       <footer> <h5>Obrigada!</h5></footer>
+  </body>
+  
+  </html>
